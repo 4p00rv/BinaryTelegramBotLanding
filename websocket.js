@@ -1,7 +1,7 @@
 (function () {
     var socket = null;
     var user_initiated = false;
-    var app_id = 2751;
+    var app_id = 7866;
     var bot_name = "binary_test_bot";
     $(document).ready(function () {
         var tokens = (location.search.match(/token\d=([\w-]+)/g) || []).map(function (val) { return val.split("=")[1]; });
