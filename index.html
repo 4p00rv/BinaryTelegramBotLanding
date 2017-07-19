@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Telegram Bot</title>
+    <link rel="stylesheet" type="text/css" href="https://style.binary.com/binary.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="websocket.js"></script>
+</head>
+
+<body>
+    <div class="custom-header">
+        <div class="icon">
+            <span class="binary">Binary<span class="orange">.com</span></span>
+            <span class="telegram">Telegram Bot</span>
+        </div>
+        <div class="menu">
+            <span class="hide-on-login login">
+                Login
+            </span>
+            <span class="show-on-login loginid"></span>
+            <ul class="show-on-login loginids">
+                <li>
+                    <span class="show-on-login loginid"></span>
+                </li>
+                <li>
+                    <span class="logout">Logout</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-box">
+            <div class="welcome hide-on-login">
+                <span class="greeting">Howdy Stranger, </span><br>
+                <span class="message">
+                    This is where you will go through the initial step to authenticate the bot. Please login to continue.
+                    <br>
+                    <br>
+                    Come back here whenever you want to switch accounts.
+                    <br>
+                    <br>
+                    Thanks,
+                    <br>
+                    People at Binary.
+                </span>
+            </div>
+            <div class="show-on-login loading" data-text="Loading...">
+                Loading...
+            </div>
+            <div class="api-token" style="display:none">
+                <div class="create">
+                    <span class="button">
+                        CREATE TOKEN
+                    </span>
+                </div>
+                <div class="empty" style="display:none;">Please create some token. They will be shown here once added.</div>
+                <div class="create-form" style="display:none;">
+                    <div>
+                        <span class="label">Token name</span>
+                        <input id="name" type="text" maxlength="20" placeholder="Enter a name">
+                    </div>
+                    <div class="label">Token Permissions:</div>
+                    <div>
+                        <input type="checkbox" id="read">
+                        <span class="label">Read</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="trade">
+                        <span class="label">Trade</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="payments">
+                        <span class="label">Payments</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="admin">
+                        <span class="label">Admin</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="button ok">Create</span>
+                        <span class="button cancel">Cancel</span>
+                    </div>
+                </div>
+                <div class="loading-tokens" data-text="Retrieving tokens...">
+                    Retrieving tokens...
+                </div>
+                <div class="tokens" style="display:none;">
+                    <div>
+                        <span>Choose one of the following token:</span>
+                    </div>
+                    <div>
+                        <span class="name column_name">Name</span>
+                        <span class="scopes column_name">Scopes</span>
+                        <span class="telegram_link column_name">Telegram link</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

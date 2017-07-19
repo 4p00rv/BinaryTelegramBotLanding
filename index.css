@@ -1,0 +1,255 @@
+body {
+    background: #ffffff;
+}
+.custom-header {
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    height: 75px;
+}
+.custom-header > div.icon {
+    margin: auto;
+}
+.custom-header > div > span {
+    font-size: 24px;
+    font-weight: 100;
+}
+.custom-header .binary {
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    border: 1px solid #2a3052;    
+    background: #2a3052;
+    border-radius: 3px 0 0 3px;
+}
+.orange {
+    color: #e98024;
+}
+.custom-header .telegram {
+    padding: 10px 15px 10px 15px;
+    color: #0088cc;    
+    border: 1px solid #0088cc;
+    border-left: none; 
+    margin-left: -5px;
+    border-radius: 0 3px 3px 0;
+}
+.custom-header > div.menu {
+    display: inline-flex;
+    float: right;
+    height: 75px;
+    width: 150px;
+    border-bottom: 1px solid #15212d;
+    border-left: 1px solid #15212d;
+    border-bottom-left-radius: 3px;    
+    position: absolute;
+    right: 0;
+}
+.custom-header > div.menu > span.login {
+    margin: auto;
+    color: #15212d;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 5px 10px 5px;
+    transition: padding .3s linear;    
+    cursor: pointer;
+}
+.custom-header > div.menu > span.login:hover {
+    border: 1px solid #2E8836;
+    color: #2E8836;
+    padding: 10px 20px 10px 20px;
+}
+.custom-header > div.menu > .loginid {
+    margin: auto;
+    color: #15212d;
+    font-size: 18px;
+    padding-top: 1px;
+    cursor: pointer;
+}
+.custom-header > div.menu > ul {
+    position: absolute;
+    font-weight: 100;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    width: 150px;
+    border-left: 1px solid #15212d;
+    border-bottom-left-radius: 3px;
+    min-height: 75px;
+}
+.custom-header > div.menu > ul > li {
+    display: none;
+    position: relative;
+    height: 50px;
+    margin-top: 0;
+    padding-top: 25px;
+    border-bottom: 1px solid #15212d;
+    background: #fff;
+}
+.custom-header > div.menu > ul > li:last-of-type {
+    border-bottom-left-radius: 3px;
+}
+.custom-header > div.menu > ul:hover > li {
+    display: block;
+}
+.custom-header > div.menu > ul >li > span {
+    margin: auto;
+    color: #15212d;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    width: 115px;
+}
+.custom-header > div.menu > ul > li > span:before {
+    content: "";
+    width: calc(100% + 10px);
+    height: 1px;
+    bottom: 0;
+    left: -5px;
+    display: inline-flex;
+    position: relative;
+    top: 27px;
+    background: #15212d;
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+.custom-header > div.menu > ul > li > span:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+.content {
+    padding-top: 80px;
+}
+.content .content-box {
+    width: 60%;
+    min-width: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: auto;
+    border: 1px solid #15212d;
+    padding: 50px;
+    border-radius: 3px;
+    color: #15212d;    
+    font-weight: 100;
+    transition: height 1s linear;
+    min-height: 200px;
+    max-height: 300px
+}
+.content .content-box .greeting {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+}
+.content .content-box .message {
+    line-height: 30px;
+}
+
+.content .content-box .loading {
+    color: rgba(0, 0, 0, .3);
+}
+
+.show-on-login {
+    display: none;
+}
+
+.content .content-box .loading:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 284px;
+    white-space: nowrap;
+    color: #15212d;
+    animation: loading 2.5s linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+.api-token .create {
+    margin-bottom: 30px;
+    text-align: right
+}
+span.button {
+    cursor: pointer;
+    color: #15212d;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 5px 10px 5px;
+    transition: all .3s linear;
+}
+span.button:hover{
+    border: 1px solid #2E8836;
+    color: #2E8836;
+    padding: 10px 20px 10px 20px;
+}
+.create span.button {
+    margin-right: 16px;
+}
+.create span.button:hover {
+    margin-right: 0;
+}
+span.button.ok {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+span.button.ok:hover {
+    margin-left: 0;
+    margin-right: 0;
+}
+span.button.cancel {
+    margin-left: 16px;
+}
+span.button.cancel:hover {
+    margin-left: 0;
+}
+.create-form > div {
+    margin-bottom: 10px;
+}
+.create-form > div > span.label {
+    margin-right: 15px;
+}
+.create-form > div > input[type="checkbox"] {
+    margin-right: 10px;
+}
+.create-form > div > input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid #15212d;
+    border-radius: 0;
+    padding: 2px 5px 2px 5px;
+}
+.create-form > div > input[type="text"]:focus {
+    outline: none;
+}
+.tokens > div {
+    margin-top: 25px;
+}
+.tokens > div > .name {
+    display: inline-block;
+    width: 30%;
+    word-wrap: break-word;
+    margin-right: 15px;
+}
+.tokens > div > .scopes {
+    display: inline-table;
+    width: 30%;
+    word-wrap: break-word;
+    text-align: left;
+}
+.tokens > div > .scopes.column_name{
+    margin-left: -5px;
+}
+.tokens > div > .telegram_link {
+    display: inline-table;
+    width: 30%;
+    margin-left: 15px;
+    word-wrap: break-word;
+    cursor: pointer;  
+    transition: all .3s linear;
+}
+.tokens > div > .telegram_link.column_name {
+    margin-left: 10px;
+}
+.tokens > div > .telegram_link:hover {
+    color: #2E8836;
+    text-decoration: underline;
+}
